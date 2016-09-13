@@ -1,0 +1,62 @@
+CARA PENGGUNAAN
+
+Safelink Template
+
+JANGAN HAPUS LINK KREDIT TEMPLATE !!!!!!!!!!!!!!!!!!!!!!!!
+
+Langkah Pertama
+Silahkan buat blog baru kemudian copy kode template dari notepad lalu paste (timpahkan) di edit HTML blog.
+
+Kemudian di menu Setting silahkan pilih “YES” pada HTTPS Redirect. Kecuali jika Anda pakai Custom domain, silahkan lewati langkah ini dan hapus kode di bawah ini di Edit HTML
+var blog = document.location.hostname;
+var slug = document.location.pathname;
+var ctld = blog.substr(blog.lastIndexOf("."));
+if (ctld != ".com") {
+var ncr = "https://" + blog.substr(0, blog.indexOf("."));
+ncr += ".blogspot.com/ncr" + slug;
+window.location.replace(ncr); };
+
+Langkah Kedua
+Silahkan buat page/halaman statis baru untuk menampilkan tombol “Visit Link” dengan judul “SAFELINK” atau apapun terserah Anda. Kemudian copy kode untuk halaman statis dari notepad dan paste pada halaman dengan mode HTML.
+
+Silahkan ganti iklan yang ada di halaman dengan iklan Anda, sebaiknya dengan iklan responsive. Ada 3 buah iklan, 1 iklan horizontal dan 2 iklan kotak.  Silahkan ganti kode “KODE IKLAN DI SINI” dengan kode iklan Anda.
+
+Kemudian ganti kode  HYPERLINK "http://gilang-access.blogspot.com/p/safelink.html" dengan URL halaman statis yang sedang Anda buat ini. 
+
+Kemudian Publish halamannya.
+
+Langkah Ketiga
+Silahkan kembali ke edit HTML, lalu silahkan ganti semua kode  HYPERLINK "http://gilang-access.blogspot.com/p/safelink.html dengan URL halaman statis yang Anda buat pada langkah kedua tadi.
+
+Pada bagian menu, yang perlu diganti hanya pada bagian berikut:
+            <li><a href='#about' title='About'>About</a></li>
+            <li><a href='https://gilang-access.blogspotcom/p/privacy.html' title='Privacy'>Privacy</a></li>
+            <li><a href='https://gilang-access.blogspot.com/p/disclaimer.html' title='Disclaimer'>Disclaimer</a></li>
+
+Silahkan ganti URL-nya dengan URL page untuk About, Privacy, dan Disclaimer.
+
+Silahkan ganti semua kode “KODE IKLAN DI SINI” (ada 3 buah) dengan kode iklan Anda. Untuk kode pertama untuk iklan horizontal dan 2 lainnya untuk iklan kotak.
+
+Jika Anda menggunakan custom domain dan tidak menggunakan HTTPS, silahkan ganti kode https dengan http pada kode ini homePage:'https://'+ window.location.hostname 
+
+Langkah Keempat
+Silahkan edit file safelink.js lalu ganti kode  HYPERLINK "http://gilang-access.blogspot.com/p/safelink.html" dengan URL halaman statis dari langkah kedua tadi di atas. Kemudian silahkan hosting file safelink.js di Google Drive lalu silahkan ganti URL/ kode ini https://cdn.rawgit.com/XXXXXXXXXXXX/safelink.js  dengan URL hosting Google Drive Anda.
+
+Langkah Kelima
+Untuk blog utama yang ingin semua link-nya di encrypted, silahkan simpan kode di bawah ini di atas kode </body>
+
+<script type='text/javascript'>
+//<![CDATA[
+protected_links = "YourDomain.com,AnotherDomain.com,youtube.com,facebook.com,google.com"; 
+  (function() {
+    var sl = document.createElement('script');
+    sl.type = 'text/javascript'; sl.async = true;
+    sl.src = 'https://cdn.rawgit.com/XXXXXXXXXXXX/safelink.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(sl);
+  })();
+//]]>
+</script>
+
+Silahkan ganti kode yang saya tandai dengan dengan URL hosting Google Drive Anda dari langkah Keempat tadi.
+
+Selesai.
