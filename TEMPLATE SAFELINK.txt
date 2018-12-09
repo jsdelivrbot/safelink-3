@@ -1319,7 +1319,7 @@ _WidgetManager._RegisterWidget(&quot;_ContactFormView&quot;, new _WidgetInfo(&qu
 </script>
 <script type='text/javascript'>
 //<![CDATA[
-function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://cdn.rawgit.com/gilang-access/safelinku/master/safelinku.js",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/gh/gilang-access/safelinku@master/safelinku.js",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
 //]]>
 </script>
 </b:if>
